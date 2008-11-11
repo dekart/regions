@@ -10,7 +10,11 @@ module Regions
       content = ""
 
       self.class.regions.hooks_for(key, block).each do |hook|
-        content << hook == block ? capture(&block) : send(hook, *args)
+        if hook == block
+          content << capture(&block)
+        else 
+          send(hook, *args)
+        end
       end
 
       concat(content, block.binding)
