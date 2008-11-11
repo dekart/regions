@@ -43,9 +43,9 @@ Helper in your plugin:
 You can also add additional parameters to specify region context. They will be
 passed to helpers:
 
-  <% region(:some_block, @user, ["some", "array"], {:any => "hash"}) do %>
-    ...
-  <% end %>
+    <% region(:some_block, @user, ["some", "array"], {:any => "hash"}) do %>
+      ...
+    <% end %>
 
 Copyright (c) 2008 "Alexey Dmitriev":http://www.html-blog.ru
 
