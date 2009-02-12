@@ -13,7 +13,7 @@ module Regions
         if hook == block
           content << capture(&block)
         else 
-          content << send(hook, *args)
+          content << send(hook, *args).to_s
         end
       end
 
